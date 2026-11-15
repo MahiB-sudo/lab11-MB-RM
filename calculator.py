@@ -1,5 +1,20 @@
 import math
 
+def square_root(a):
+    try:
+        if a < 0:
+            raise ValueError("Cannot calculate square root of a negative number")
+        return math.sqrt(a)
+    except ValueError:
+        raise
+
+
+def hypotenuse(a, b):
+    try:
+        return math.hypot(a, b)
+    except ValueError:
+        raise
+
 def add(a, b):
     return a + b
 
