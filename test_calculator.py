@@ -32,16 +32,15 @@ class TestCalculator(unittest.TestCase):
             calculator.square_root(-1)
 
     # ---------- Partner 2 ----------
-    # ---------- Partner 2 ----------
     def test_add(self):
         self.assertEqual(calculator.add(2, 3), 5)
         self.assertEqual(calculator.add(-4, 1), -3)
         self.assertEqual(calculator.add(0, 0), 0)
 
     def test_subtract(self):
-        self.assertEqual(calculator.sub(10, 4), 6)
-        self.assertEqual(calculator.sub(3, 8), -5)
-        self.assertEqual(calculator.sub(-2, -2), 0)
+        self.assertEqual(calculator.subtract(10, 4), 6)
+        self.assertEqual(calculator.subtract(3, 8), -5)
+        self.assertEqual(calculator.subtract(-2, -2), 0)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
