@@ -1,3 +1,7 @@
+# https://github.com/MahiB-sudo/lab11-MB-RM
+# Partner 1: Mahiba Bhuiyan
+# Partner 2: Ross Modur
+
 import math
 
 def square_root(a):
@@ -18,7 +22,7 @@ def hypotenuse(a, b):
 def add(a, b):
     return a + b
 
-def subtract(a, b):
+def sub(a, b):
     return a - b
 
 def mul(a, b):
@@ -29,10 +33,13 @@ def div(a, b):
         raise ZeroDivisionError("Cannot divide by zero")
     return b / a
 
-def logarithm(a, b):
+def log(a, b):
     if a <= 0 or a == 1 or b <= 0:
         raise ValueError("Invalid logarithm arguments")
     return math.log(b, a)
+
+def logarithm(a, b):
+    return log(a, b)
 
 def exp(a, b):
     return a ** b

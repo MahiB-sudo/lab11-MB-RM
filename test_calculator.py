@@ -1,3 +1,7 @@
+# https://github.com/MahiB-sudo/lab11-MB-RM
+# Partner 1: Mahiba Bhuiyan
+# Partner 2: Ross Modur
+
 import unittest
 import calculator
 
@@ -28,20 +32,33 @@ class TestCalculator(unittest.TestCase):
             calculator.square_root(-1)
 
     # ---------- Partner 2 ----------
+    # ---------- Partner 2 ----------
     def test_add(self):
-        pass
+        self.assertEqual(calculator.add(2, 3), 5)
+        self.assertEqual(calculator.add(-4, 1), -3)
+        self.assertEqual(calculator.add(0, 0), 0)
 
     def test_subtract(self):
-        pass
+        self.assertEqual(calculator.sub(10, 4), 6)
+        self.assertEqual(calculator.sub(3, 8), -5)
+        self.assertEqual(calculator.sub(-2, -2), 0)
 
     def test_divide_by_zero(self):
-        pass
+        with self.assertRaises(ZeroDivisionError):
+            calculator.div(0, 5)
 
     def test_logarithm(self):
-        pass
+        self.assertAlmostEqual(calculator.log(2, 8), 3)
+        self.assertAlmostEqual(calculator.log(10, 100), 2)
+        self.assertAlmostEqual(calculator.log(3, 1), 0)
 
     def test_log_invalid_base(self):
-        pass
+        with self.assertRaises(ValueError):
+            calculator.log(1, 10)
+        with self.assertRaises(ValueError):
+            calculator.log(0, 10)
+        with self.assertRaises(ValueError):
+            calculator.log(-2, 10)
 
 
 if __name__ == "__main__":
